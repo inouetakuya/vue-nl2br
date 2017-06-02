@@ -2,7 +2,7 @@
   "name": "vue-nl2br",
   "version": "0.0.1",
   "description": "A vue component that turns new lines into line breaks",
-  "main": "index.js",
+  "main": "./dist/vue-nl2br.js",
   "scripts": {
     "test": "echo \\\"Error: no test specified\\\" && exit 1",
     "build": "webpack"
