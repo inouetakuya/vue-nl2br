@@ -18,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/inouetakuya/vue-nl2br/issues"
   },
-  "homepage": "https://github.com/inouetakuya/vue-nl2br#readme"
+  "homepage": "https://github.com/inouetakuya/vue-nl2br#readme",
+  "devDependencies": {
+    "vue-loader": "^12.2.1",
+    "webpack": "^2.6.1"
+  }
 }
