@@ -1,6 +1,4 @@
-import Vue from 'vue'
-
-export default Vue.component('nl2br', {
+export default {
   functional: true,
   props: {
     tag: {
@@ -21,4 +19,4 @@ export default Vue.component('nl2br', {
         return accumulator.concat([createElement('br'), string])
       }))
   },
-})
+}
