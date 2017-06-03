@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/inouetakuya/vue-nl2br#readme",
   "dependencies": {
-    "vue": "^2.3.3"
+    "vue": "^2.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",
