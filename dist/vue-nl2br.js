@@ -76,24 +76,22 @@
   props: {
     tag: {
       type: String,
-      required: true,
+      required: true
     },
     content: {
       type: String,
-      required: true,
-    },
+      required: true
+    }
   },
-  render (createElement, context) {
-    return createElement(context.props.tag,
-      context.props.content.split('\n').reduce((accumulator, string) => {
-        if (!Array.isArray(accumulator)) {
-          return [accumulator, createElement('br'), string]
-        }
-        return accumulator.concat([createElement('br'), string])
-      }))
-  },
+  render(createElement, context) {
+    return createElement(context.props.tag, context.props.content.split('\n').reduce((accumulator, string) => {
+      if (!Array.isArray(accumulator)) {
+        return [accumulator, createElement('br'), string];
+      }
+      return accumulator.concat([createElement('br'), string]);
+    }));
+  }
 });
-
 
 /***/ }),
 /* 1 */
@@ -105,7 +103,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /* harmony default export */ __webpack_exports__["default"] = (__WEBPACK_IMPORTED_MODULE_0__Nl2br__["a" /* default */]);
-
 
 /***/ })
 /******/ ]);
