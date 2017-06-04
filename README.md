@@ -6,7 +6,7 @@ A vue component that turns new lines into line breaks.
 
 * [Vue.js](https://github.com/vuejs/vue) `^2.0.0`
 
-## Install
+## Installation
 
 ```sh
 npm install --save vue-nl2br
@@ -58,6 +58,15 @@ export default {
 }
 </script>
 ```
+
+## Props
+
+* `tag`: HTML tag name which is passed to [createElement function](https://vuejs.org/v2/guide/render-function.html#createElement-Arguments)
+  * Type: `String`
+  * Required: true
+* `content`: Content in the tag.
+  * Type: `String`
+  * Required: true
 
 ## License
 
