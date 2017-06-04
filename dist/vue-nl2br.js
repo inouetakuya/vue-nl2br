@@ -93,13 +93,13 @@ exports.default = {
       type: String,
       required: true
     },
-    content: {
+    text: {
       type: String,
       required: true
     }
   },
   render: function render(createElement, context) {
-    return createElement(context.props.tag, context.props.content.split('\n').reduce(function (accumulator, string) {
+    return createElement(context.props.tag, context.props.text.split('\n').reduce(function (accumulator, string) {
       if (!Array.isArray(accumulator)) {
         return [accumulator, createElement('br'), string];
       }
