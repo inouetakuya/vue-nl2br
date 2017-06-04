@@ -78,10 +78,15 @@ return /******/ (function(modules) { // webpackBootstrap
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony default export */ __webpack_exports__["a"] = ({
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = {
   functional: true,
   props: {
     tag: {
@@ -93,26 +98,34 @@ return /******/ (function(modules) { // webpackBootstrap
       required: true
     }
   },
-  render(createElement, context) {
-    return createElement(context.props.tag, context.props.content.split('\n').reduce((accumulator, string) => {
+  render: function render(createElement, context) {
+    return createElement(context.props.tag, context.props.content.split('\n').reduce(function (accumulator, string) {
       if (!Array.isArray(accumulator)) {
         return [accumulator, createElement('br'), string];
       }
       return accumulator.concat([createElement('br'), string]);
     }));
   }
-});
+};
 
 /***/ }),
 /* 1 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Nl2br__ = __webpack_require__(0);
 
 
-/* harmony default export */ __webpack_exports__["default"] = (__WEBPACK_IMPORTED_MODULE_0__Nl2br__["a" /* default */]);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _Nl2br = __webpack_require__(0);
+
+var _Nl2br2 = _interopRequireDefault(_Nl2br);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = _Nl2br2.default;
 
 /***/ })
 /******/ ]);

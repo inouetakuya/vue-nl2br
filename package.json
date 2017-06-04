@@ -12,7 +12,8 @@
     "url": "git+ssh://git@github.com/inouetakuya/vue-nl2br.git"
   },
   "keywords": [
-    "vue", "nl2br"
+    "vue",
+    "nl2br"
   ],
   "author": "INOUE Takuya",
   "license": "MIT",
@@ -26,6 +27,7 @@
   "devDependencies": {
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
     "webpack": "^2.6.1"
   }
 }
