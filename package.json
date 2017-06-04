@@ -1,6 +1,6 @@
 {
   "name": "vue-nl2br",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A vue component that turns new lines into line breaks",
   "main": "./dist/vue-nl2br.js",
   "scripts": {
@@ -12,7 +12,7 @@
     "url": "git+ssh://git@github.com/inouetakuya/vue-nl2br.git"
   },
   "keywords": [
-    "vue"
+    "vue", "nl2br"
   ],
   "author": "INOUE Takuya",
   "license": "MIT",
