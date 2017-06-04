@@ -2,9 +2,10 @@
   "name": "vue-nl2br",
   "version": "0.0.1",
   "description": "A vue component that turns new lines into line breaks",
-  "main": "index.js",
+  "main": "./dist/vue-nl2br.js",
   "scripts": {
-    "test": "echo \\\"Error: no test specified\\\" && exit 1"
+    "test": "echo \\\"Error: no test specified\\\" && exit 1",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,13 @@
   "bugs": {
     "url": "https://github.com/inouetakuya/vue-nl2br/issues"
   },
-  "homepage": "https://github.com/inouetakuya/vue-nl2br#readme"
+  "homepage": "https://github.com/inouetakuya/vue-nl2br#readme",
+  "dependencies": {
+    "vue": "^2.0.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "webpack": "^2.6.1"
+  }
 }
