@@ -6,7 +6,7 @@ A vue component that turns new lines into line breaks.
 
 * [Vue.js](https://github.com/vuejs/vue) `^2.0.0`
 
-## Install
+## Installation
 
 ```sh
 npm install --save vue-nl2br
@@ -15,7 +15,7 @@ npm install --save vue-nl2br
 ## Usage
 
 ```html
-<nl2br tag="p" :content="`myLine1\nmyLine2`" />
+<nl2br tag="p" :text="`myLine1\nmyLine2`" />
 ```
 
 is rendered to
@@ -43,7 +43,7 @@ https://vuejs.org/v2/guide/components.html#Local-Registration
 // MyComponent.vue
 
 <template>
-  <nl2br tag="p" :content="`myLine1\nmyLine2`" />
+  <nl2br tag="p" :text="`myLine1\nmyLine2`" />
 </template>
 
 <script>
@@ -58,3 +58,18 @@ export default {
 }
 </script>
 ```
+
+## Props
+
+* `tag`: HTML tag name which is passed to [createElement function](https://vuejs.org/v2/guide/render-function.html#createElement-Arguments)
+  * Type: `String`
+  * Required: true
+* `text`: Text in the tag.
+  * Type: `String`
+  * Required: true
+
+## License
+
+[MIT](https://opensource.org/licenses/MIT)
+
+Copyright (c) 2017, INOUE Takuya
