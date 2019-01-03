@@ -1,3 +1,7 @@
+## [0.1.1](https://github.com/inouetakuya/vue-nl2br/compare/v0.1.0...v0.1.1) (2019-01-03)
+
+
+
 # Change Log
 
 All notable changes to this project will be documented in this file.
