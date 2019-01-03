@@ -15,13 +15,13 @@ npm install --save vue-nl2br
 ## Usage
 
 ```html
-<nl2br tag="p" :text="`myLine1\nmyLine2`" />
+<nl2br tag="p" :text="`myLine1\nmyLine2`" class-name="foo bar" />
 ```
 
 is rendered to
 
 ```html
-<p>myLine1<br>myLine2</p>
+<p class="foo bar">myLine1<br>myLine2</p>
 ```
 
 ### (1) To register a global component
@@ -61,12 +61,15 @@ export default {
 
 ## Props
 
-* `tag`: HTML tag name which is passed to [createElement function](https://vuejs.org/v2/guide/render-function.html#createElement-Arguments)
-  * Type: `String`
-  * Required: true
-* `text`: Text in the tag.
-  * Type: `String`
-  * Required: true
+- `tag`: HTML tag name which is passed to [createElement function](https://vuejs.org/v2/guide/render-function.html#createElement-Arguments)
+  - Type: `String`
+  - Required: true
+- `text`: Text in the tag.
+  - Type: `String`
+  - Required: true
+- `className`: HTML class name(s) 
+  - Type: `String`
+  - Required: false
 
 ## License
 
