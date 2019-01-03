@@ -21,7 +21,7 @@
     "url": "https://github.com/inouetakuya/vue-nl2br/issues"
   },
   "homepage": "https://github.com/inouetakuya/vue-nl2br#readme",
-  "dependencies": {
+  "peerDependencies": {
     "vue": "^2.0.0"
   },
   "devDependencies": {
