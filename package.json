@@ -28,6 +28,7 @@
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
     "babel-preset-es2015": "^6.24.1",
+    "conventional-changelog-cli": "^2.0.11",
     "webpack": "^2.6.1"
   }
 }
