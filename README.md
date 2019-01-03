@@ -1,30 +1,34 @@
 # vue-nl2br
 
-A vue component that turns new lines into line breaks.
+A vue component which turns new lines into line breaks.
+
+## Why not just use CSS?
+
+See [Why not just use CSS `white-space: pre;`? · Issue #7](https://github.com/inouetakuya/vue-nl2br/issues/7)
 
 ## Requirement
 
-* [Vue.js](https://github.com/vuejs/vue) `^2.0.0`
+- [Vue.js](https://github.com/vuejs/vue) `^2.0.0`
 
 ## Installation
 
-```sh
+```shell
 npm install --save vue-nl2br
 ```
 
 ## Usage
 
 ```html
-<nl2br tag="p" :text="`myLine1\nmyLine2`" />
+<nl2br tag="p" :text="`myLine1\nmyLine2`" class-name="foo bar" />
 ```
 
 is rendered to
 
 ```html
-<p>myLine1<br>myLine2</p>
+<p class="foo bar">myLine1<br>myLine2</p>
 ```
 
-### (1) To register a global component
+### (1) Global registration
 
 https://vuejs.org/v2/guide/components.html#Registration
 
@@ -50,7 +54,7 @@ https://vuejs.org/v2/guide/components.html#Local-Registration
 import Nl2br from 'vue-nl2br'
 
 export default {
-  name: 'my-component',
+  name: 'MyComponent',
   components: {
     Nl2br,
   },
@@ -61,12 +65,15 @@ export default {
 
 ## Props
 
-* `tag`: HTML tag name which is passed to [createElement function](https://vuejs.org/v2/guide/render-function.html#createElement-Arguments)
-  * Type: `String`
-  * Required: true
-* `text`: Text in the tag.
-  * Type: `String`
-  * Required: true
+- `tag`: HTML tag name which is passed to [createElement function](https://vuejs.org/v2/guide/render-function.html#createElement-Arguments)
+  - Type: `String`
+  - Required: true
+- `text`: Text in the tag.
+  - Type: `String`
+  - Required: true
+- `className`: HTML class name(s) 
+  - Type: `String`
+  - Required: false
 
 ## License
 
