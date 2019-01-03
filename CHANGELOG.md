@@ -1,11 +1,9 @@
 ## [0.1.1](https://github.com/inouetakuya/vue-nl2br/compare/v0.1.0...v0.1.1) (2019-01-03)
 
+### Chores
 
-
-# Change Log
-
-All notable changes to this project will be documented in this file.
-See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+- [Write CHANGELOG by inouetakuya · Pull Request #11](https://github.com/inouetakuya/vue-nl2br/pull/11)
+- [Write MIT License file by inouetakuya · Pull Request #10](https://github.com/inouetakuya/vue-nl2br/pull/10)
 
 # [0.1.0](https://github.com/inouetakuya/vue-nl2br/compare/v0.0.5...v0.1.0) (2019-01-03)
 
