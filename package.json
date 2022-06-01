@@ -2,27 +2,33 @@
   "name": "vue-nl2br",
   "version": "0.2.0",
   "description": "A vue component that turns new lines into line breaks.",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "scripts": {
-    "test": "echo \\\"Error: no test specified\\\" && exit 1",
-    "build": "rm -rf dist/ && tsc",
-    "version": "conventional-changelog --preset angular --infile CHANGELOG.md --same-file && git add CHANGELOG.md"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/inouetakuya/vue-nl2br.git"
-  },
   "keywords": [
     "vue",
     "nl2br"
   ],
   "author": "INOUE Takuya",
-  "license": "MIT",
+  "homepage": "https://github.com/inouetakuya/vue-nl2br#readme",
   "bugs": {
     "url": "https://github.com/inouetakuya/vue-nl2br/issues"
   },
-  "homepage": "https://github.com/inouetakuya/vue-nl2br#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/inouetakuya/vue-nl2br.git"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "echo \\\"Error: no test specified\\\" && exit 1",
+    "build": "rm -rf dist/ && tsc",
+    "version": "conventional-changelog --preset angular --infile CHANGELOG.md --same-file && git add CHANGELOG.md"
+  },
   "peerDependencies": {
     "vue": "^2.0.0"
   },
