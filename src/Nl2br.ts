@@ -18,13 +18,20 @@ export default {
       required: false,
     },
   },
-  render(createElement: CreateElement, context: RenderContext<Props>) {
-    const { tag, text, className } = context.props
+  render (createElement: CreateElement, context: RenderContext<Props>) {
+    const {
+      tag,
+      text,
+      className
+    } = context.props
 
     return createElement(tag, {
       'class': className
     }, text.split('\n').reduce((accumulator: (string | VNode)[], string: string) => {
-      return accumulator.concat([createElement('br'), string])
+      return accumulator.length === 0 ?
+        [string] :
+        accumulator.concat([createElement('br'),
+          string])
     }, []))
   },
 }
