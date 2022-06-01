@@ -29,7 +29,7 @@
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "babel-loader": "^8.0.6",
-    "conventional-changelog-cli": "^2.0.21",
+    "conventional-changelog-cli": "^2.2.2",
     "kind-of": "^6.0.3",
     "minimist": "^1.2.5",
     "serialize-javascript": "^3.0.0",
