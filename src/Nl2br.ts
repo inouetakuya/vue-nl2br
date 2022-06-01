@@ -14,10 +14,10 @@ export default {
       required: false,
     },
   },
-  render(createElement, context) {
+  render(createElement: any, context: any) {
     return createElement(context.props.tag, {
       'class': context.props.className
-    }, context.props.text.split('\n').reduce((accumulator, string) => {
+    }, context.props.text.split('\n').reduce((accumulator: any, string: string) => {
       if (!Array.isArray(accumulator)) {
         return [accumulator, createElement('br'), string]
       }
