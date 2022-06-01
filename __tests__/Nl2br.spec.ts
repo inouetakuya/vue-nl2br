@@ -1,4 +1,5 @@
-import { mount } from '@vue/test-utils';
+import { shallowMount } from '@vue/test-utils';
+// import Vue from 'vue';
 import Nl2br from '../src/Nl2br';
 
 // // https://github.com/vuejs/vue-test-utils/issues/255#issuecomment-628628682
@@ -6,27 +7,23 @@ import Nl2br from '../src/Nl2br';
 //   Vue & { [key: string]: any } & T
 //   >;
 
+// global.Vue = Vue as any
 
-const factoryWrapper = () => {
-  return mount(Nl2br, {
+// const factoryWrapper = () => {
+// }
+
+describe('Nl2br', () => {
+  const wrapper = shallowMount(Nl2br, {
     context: {
       props: {
         tag: 'p',
-        text: 'myLine1\nmyLine2',
+        text: `myLine1\nmyLine2`,
         className: 'foo bar',
       }
     }
   })
-}
-
-describe('Nl2br', () => {
-  let wrapper: any;
-
-  beforeEach(() => {
-    wrapper = factoryWrapper();
-  })
 
   test('mount', () => {
-    expect(wrapper.is(Nl2br)).toBe(true)
+    expect(wrapper.html()).toBe('')
   })
 })
