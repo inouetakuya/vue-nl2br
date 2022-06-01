@@ -1,4 +1,4 @@
-import { shallowMount } from '@vue/test-utils';
+import { mount } from '@vue/test-utils';
 // import Vue from 'vue';
 import Nl2br from '../src/Nl2br';
 
@@ -13,7 +13,7 @@ import Nl2br from '../src/Nl2br';
 // }
 
 describe('Nl2br', () => {
-  const wrapper = shallowMount(Nl2br, {
+  const wrapper = mount(Nl2br, {
     context: {
       props: {
         tag: 'p',
@@ -24,6 +24,6 @@ describe('Nl2br', () => {
   })
 
   test('mount', () => {
-    expect(wrapper.html()).toBe('')
+    expect(wrapper.html()).toBe("<p class=\"foo bar\">myLine1<br>myLine2</p>")
   })
 })
