@@ -32,7 +32,7 @@
     "conventional-changelog-cli": "^2.2.2",
     "kind-of": "^6.0.3",
     "minimist": "^1.2.5",
-    "serialize-javascript": "^3.0.0",
+    "serialize-javascript": "^6.0.0",
     "webpack": "^5.72.1",
     "webpack-cli": "^4.9.2"
   }
