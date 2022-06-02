@@ -25,6 +25,8 @@
     "dist"
   ],
   "scripts": {
+    "lint": "eslint --ext .js,.ts --ignore-path .gitignore .",
+    "lint:fix": "eslint --ext .js,.ts --ignore-path .gitignore . --fix",
     "test": "echo \\\"Error: no test specified\\\" && exit 1",
     "build": "rm -rf dist/ && tsc",
     "version": "conventional-changelog --preset angular --infile CHANGELOG.md --same-file && git add CHANGELOG.md"
@@ -33,7 +35,13 @@
     "vue": "^2.0.0"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.27.0",
+    "@typescript-eslint/parser": "^5.27.0",
     "conventional-changelog-cli": "^2.2.2",
+    "eslint": "^8.16.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.6.2",
     "typescript": "^4.7.2"
   }
 }
