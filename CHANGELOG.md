@@ -14,6 +14,7 @@
 
 ### Bug Fixes
 
+- Rebuild after adding className property
 - [Security vulnerabilities #20](https://github.com/inouetakuya/vue-nl2br/pull/20)
   - Bump webpack to v4 
 
