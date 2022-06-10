@@ -1,5 +1,7 @@
 # vue-nl2br
 
+![main workflow](https://github.com/inouetakuya/vue-nl2br/actions/workflows/main.yml/badge.svg)
+
 A vue component which turns new lines into line breaks.
 
 ## Why not just use CSS?
