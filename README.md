@@ -79,7 +79,7 @@ export default {
 
 Note: when `text` property is empty or null, it renders an empty tag. ex) `<p></p>`.
 
-If you prefer to render nothing at all, use `v-if`:
+If you prefer to render nothing at all, use `v-if` directive:
 
 ```html
 <nl2br v-if="myText" tag="p" :text="myText" />
