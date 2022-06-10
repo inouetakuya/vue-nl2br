@@ -1,5 +1,11 @@
 import type { CreateElement, RenderContext, VNode } from 'vue'
 
+type Props = {
+  tag: string
+  text: string
+  className?: string
+}
+
 export default {
   functional: true,
   props: {
@@ -16,13 +22,15 @@ export default {
       required: false,
     },
   },
-  render(createElement: CreateElement, context: RenderContext): VNode {
+  render(createElement: CreateElement, context: RenderContext<Props>): VNode {
+    const { tag, text, className } = context.props
+
     return createElement(
-      context.props.tag,
+      tag,
       {
-        class: context.props.className,
+        class: className,
       },
-      context.props.text
+      text
         .split('\n')
         .reduce((accumulator: (VNode | string)[], string: string) => {
           if (accumulator.length === 0) {
