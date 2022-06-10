@@ -1,3 +1,11 @@
+import type { CreateElement, RenderContext, VNode } from 'vue'
+
+type Props = {
+  tag: string
+  text: string
+  className?: string
+}
+
 export default {
   functional: true,
   props: {
@@ -14,20 +22,22 @@ export default {
       required: false,
     },
   },
-  render(createElement: any, context: any) {
+  render(createElement: CreateElement, context: RenderContext<Props>): VNode {
+    const { tag, text, className } = context.props
+
     return createElement(
-      context.props.tag,
+      tag,
       {
-        class: context.props.className,
+        class: className,
       },
-      context.props.text
+      text
         .split('\n')
-        .reduce((accumulator: any, string: string) => {
-          if (!Array.isArray(accumulator)) {
-            return [accumulator, createElement('br'), string]
+        .reduce((accumulator: (VNode | string)[], string: string) => {
+          if (accumulator.length === 0) {
+            return new Array(string)
           }
           return accumulator.concat([createElement('br'), string])
-        })
+        }, [])
     )
   },
 }
