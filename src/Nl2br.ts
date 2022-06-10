@@ -2,7 +2,7 @@ import type { CreateElement, RenderContext, VNode } from 'vue'
 
 type Props = {
   tag: string
-  text: string
+  text: string | null
   className?: string
 }
 
@@ -15,7 +15,7 @@ export default {
     },
     text: {
       type: String,
-      required: true,
+      default: null,
     },
     className: {
       type: String,
@@ -23,7 +23,8 @@ export default {
     },
   },
   render(createElement: CreateElement, context: RenderContext<Props>): VNode {
-    const { tag, text, className } = context.props
+    const { tag, className } = context.props
+    const text = context.props.text || ''
 
     return createElement(
       tag,

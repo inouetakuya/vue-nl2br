@@ -4,7 +4,7 @@ import type { ExtendedWrapper } from './types/wrapper'
 
 const factoryWrapper = (props: {
   tag: string
-  text: string
+  text: string | null
   className?: string
 }): ExtendedWrapper => {
   return mount(Nl2br, {
@@ -31,6 +31,16 @@ describe('Nl2br', () => {
   describe('when text is empty', () => {
     beforeEach(() => {
       wrapper = factoryWrapper({ tag: 'p', text: '' })
+    })
+
+    it('creates empty p element', () => {
+      expect(wrapper.html()).toBe('<p></p>')
+    })
+  })
+
+  describe('when text is null', () => {
+    beforeEach(() => {
+      wrapper = factoryWrapper({ tag: 'p', text: null })
     })
 
     it('creates empty p element', () => {
