@@ -34,7 +34,7 @@ describe('Nl2br', () => {
     wrapper = factoryWrapper()
   })
 
-  test('create br elements', () => {
+  it('creates br elements', () => {
     expect(wrapper.html()).toBe('<p class="foo bar">myLine<br>myLine2</p>')
   })
 
@@ -43,7 +43,7 @@ describe('Nl2br', () => {
       wrapper = factoryWrapper({ text: '' })
     })
 
-    test('create empty p elements', () => {
+    it('creates empty p elements', () => {
       expect(wrapper.html()).toBe('<p class="foo bar"></p>')
     })
   })
