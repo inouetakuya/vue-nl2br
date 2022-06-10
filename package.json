@@ -27,7 +27,7 @@
   "scripts": {
     "lint": "eslint --ext .js,.ts --ignore-path .gitignore .",
     "lint:fix": "eslint --ext .js,.ts --ignore-path .gitignore . --fix",
-    "test": "echo \\\"Error: no test specified\\\" && exit 1",
+    "test": "jest",
     "build": "rm -rf dist/ && tsc",
     "version": "conventional-changelog --preset angular --infile CHANGELOG.md --same-file && git add CHANGELOG.md"
   },
