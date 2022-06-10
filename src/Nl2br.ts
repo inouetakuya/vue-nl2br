@@ -24,12 +24,12 @@ export default {
       },
       context.props.text
         .split('\n')
-        .reduce((accumulator: any, string: string) => {
-          if (!Array.isArray(accumulator)) {
-            return [accumulator, createElement('br'), string]
+        .reduce((accumulator: (VNode | string)[], string: string) => {
+          if (accumulator.length === 0) {
+            return new Array(string)
           }
           return accumulator.concat([createElement('br'), string])
-        })
+        }, [])
     )
   },
 }
