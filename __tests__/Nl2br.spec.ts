@@ -1,18 +1,50 @@
-import { mount } from '@vue/test-utils'
+import { mount, Wrapper } from '@vue/test-utils'
+import Vue from 'vue'
 import Nl2br from '../src/Nl2br'
 
-describe('Nl2br', () => {
-  const wrapper = mount(Nl2br, {
+// https://github.com/vuejs/vue-test-utils/issues/255#issuecomment-628628682
+type ExtendedWrapper<T = Record<string, any>> = Wrapper<
+  Vue & { [key: string]: any } & T
+>
+
+const factoryWrapper = ({
+  tag = 'p',
+  text = 'myLine\nmyLine2',
+  className = 'foo bar',
+}: {
+  tag?: string
+  text?: string
+  className?: string
+} = {}): ExtendedWrapper => {
+  return mount(Nl2br, {
     context: {
       props: {
-        tag: 'p',
-        text: 'myLine\nmyLine2',
-        className: 'foo bar',
+        tag,
+        text,
+        className,
       },
     },
+  })
+}
+
+describe('Nl2br', () => {
+  let wrapper: ExtendedWrapper
+
+  beforeEach(() => {
+    wrapper = factoryWrapper()
   })
 
   test('create br elements', () => {
     expect(wrapper.html()).toBe('<p class="foo bar">myLine<br>myLine2</p>')
+  })
+
+  describe('when text is empty', () => {
+    beforeEach(() => {
+      wrapper = factoryWrapper({ text: '' })
+    })
+
+    test('create empty p elements', () => {
+      expect(wrapper.html()).toBe('<p class="foo bar"></p>')
+    })
   })
 })
