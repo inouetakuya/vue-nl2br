@@ -1,11 +1,6 @@
-import { mount, Wrapper } from '@vue/test-utils'
-import Vue from 'vue'
+import { mount } from '@vue/test-utils'
 import Nl2br from '../src/Nl2br'
-
-// https://github.com/vuejs/vue-test-utils/issues/255#issuecomment-628628682
-type ExtendedWrapper<T = Record<string, any>> = Wrapper<
-  Vue & { [key: string]: any } & T
->
+import type { ExtendedWrapper } from './types/wrapper'
 
 const factoryWrapper = ({
   tag = 'p',
