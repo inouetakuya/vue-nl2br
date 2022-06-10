@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.0.0](https://github.com/inouetakuya/vue-nl2br/compare/v0.2.0...v1.0.0) (2022-06-10)
+
+- [Build with TypeScript #45](https://github.com/inouetakuya/vue-nl2br/pull/45)
+
+And many improvements:
+
+- [Prettier and ESLint #46](https://github.com/inouetakuya/vue-nl2br/pull/46)
+- [CI #48](https://github.com/inouetakuya/vue-nl2br/pull/48)
+- [Add tests #58](https://github.com/inouetakuya/vue-nl2br/pull/58)
+- [Improve types #60](https://github.com/inouetakuya/vue-nl2br/pull/60)
+
 ## [0.2.0](https://github.com/inouetakuya/vue-nl2br/compare/v0.1.2...v0.2.0) (2022-06-01)
 
 ### Bug Fixes
