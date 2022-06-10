@@ -72,10 +72,18 @@ export default {
   - Required: true
 - `text`: Text in the tag.
   - Type: `String`
-  - Required: true
+  - Default: null
 - `className`: HTML class name(s) 
   - Type: `String`
   - Required: false
+
+Note: when `text` property is empty or null, it renders an empty tag. ex) `<p></p>`.
+
+If you prefer to render nothing at all, use `v-if`:
+
+```html
+<nl2br v-if="myText" tag="p" :text="myText" />
+``` 
 
 ## License
 
