@@ -1,3 +1,5 @@
+import type { CreateElement, RenderContext, VNode } from 'vue'
+
 export default {
   functional: true,
   props: {
@@ -14,7 +16,7 @@ export default {
       required: false,
     },
   },
-  render(createElement: any, context: any) {
+  render(createElement: CreateElement, context: RenderContext): VNode {
     return createElement(
       context.props.tag,
       {
