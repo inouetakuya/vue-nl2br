@@ -1,6 +1,6 @@
 {
   "name": "vue-nl2br",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A vue component that turns new lines into line breaks.",
   "keywords": [
     "vue",

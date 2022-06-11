@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.1.0](https://github.com/inouetakuya/vue-nl2br/compare/v1.0.0...v1.1.0) (2022-06-11)
+
+### Features
+
+- Allow null text ([#63](https://github.com/inouetakuya/vue-nl2br/issues/63)) ([0065659](https://github.com/inouetakuya/vue-nl2br/commit/0065659f3a9cdfa485ce744a2f42e9d4f510a20c))
+
 ## [1.0.0](https://github.com/inouetakuya/vue-nl2br/compare/v0.2.0...v1.0.0) (2022-06-10)
 
 - [Build with TypeScript #45](https://github.com/inouetakuya/vue-nl2br/pull/45)
