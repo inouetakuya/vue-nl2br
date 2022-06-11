@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.1.1](https://github.com/inouetakuya/vue-nl2br/compare/v1.1.0...v1.1.1) (2022-06-11)
+
+### Bug Fixes
+
+- Not built when v1.1.0 was released
+
 ## [1.1.0](https://github.com/inouetakuya/vue-nl2br/compare/v1.0.0...v1.1.0) (2022-06-11)
 
 ### Features
