@@ -38,7 +38,7 @@ export default {
             return new Array(string)
           }
           return accumulator.concat([createElement('br'), string])
-        }, [])
+        }, []),
     )
   },
 }
