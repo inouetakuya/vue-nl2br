@@ -1,44 +1,21 @@
-import type { CreateElement, RenderContext, VNode } from 'vue'
+import type { FunctionalComponent, VNode } from 'vue';
+import { h } from 'vue';
 
-type Props = {
-  tag: string
-  text: string | null
-  className?: string
-}
+type RootEl = Parameters<typeof h>[0];
 
-export default {
-  functional: true,
-  props: {
-    tag: {
-      type: String,
-      required: true,
-    },
-    text: {
-      type: String,
-      default: null,
-    },
-    className: {
-      type: String,
-      required: false,
-    },
-  },
-  render(createElement: CreateElement, context: RenderContext<Props>): VNode {
-    const { tag, className } = context.props
-    const text = context.props.text || ''
+const Nl2br: FunctionalComponent<{ tag: RootEl, text?: string, className?: string }> =
+  (props, ctx) =>
+    h(props.tag, { ...ctx.attrs, class: className }, (props.text ?? '')
+      .split('\n')
+      .reduce((acc: Array<VNode | string>, string: string) => {
+        if (acc.length === 0)
+          return [string];
 
-    return createElement(
-      tag,
-      {
-        class: className,
-      },
-      text
-        .split('\n')
-        .reduce((accumulator: (VNode | string)[], string: string) => {
-          if (accumulator.length === 0) {
-            return new Array(string)
-          }
-          return accumulator.concat([createElement('br'), string])
-        }, []),
-    )
-  },
-}
+        return [...acc, h('br'), string];
+       }, []));
+Nl2br.props = {
+  tag: { type: [Object, String], required: true },
+  text: { type: String, required: false },
+  className: { type: String, required: false }
+};
+export default Nl2br;
