@@ -48,7 +48,7 @@
     "prettier": "3.8.1",
     "ts-jest": "29.4.9",
     "ts-node": "10.9.2",
-    "typescript": "5.9.3",
+    "typescript": "6.0.2",
     "vue": "2.7.16",
     "vue-template-compiler": "2.7.16"
   }
