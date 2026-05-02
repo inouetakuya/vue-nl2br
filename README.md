@@ -1,12 +1,50 @@
 # vue-nl2br
 
+> **DEPRECATED — No longer maintained**
+>
+> This package is no longer maintained. [Vue 2 reached End of Life on December 31, 2023](https://v2.vuejs.org/lts/), and modern CSS makes this component unnecessary in virtually all cases.
+>
+> **Use CSS `white-space: pre-wrap;` instead.** See the [Migration](#migration) section below.
+
 ![main workflow](https://github.com/inouetakuya/vue-nl2br/actions/workflows/main.yml/badge.svg)
 
 A vue component which turns new lines into line breaks.
 
-## Why not just use CSS?
+## Migration
 
-See [Why not just use CSS `white-space: pre;`? · Issue #7](https://github.com/inouetakuya/vue-nl2br/issues/7)
+In modern browsers, `vue-nl2br` can be replaced with a single CSS property: `white-space: pre-wrap;`.
+
+### Before
+
+```html
+<nl2br tag="p" :text="`myLine1\nmyLine2`" />
+```
+
+### After
+
+```html
+<p style="white-space: pre-wrap;">{{ `myLine1\nmyLine2` }}</p>
+```
+
+Or with a CSS class:
+
+```css
+.nl2br {
+  white-space: pre-wrap;
+}
+```
+
+```html
+<p class="nl2br">{{ text }}</p>
+```
+
+### Why `pre-wrap` instead of `pre`?
+
+Historically, `white-space: pre;` was sometimes considered insufficient because it disables line wrapping (see [Issue #7](https://github.com/inouetakuya/vue-nl2br/issues/7)). `white-space: pre-wrap;` solves this by preserving line breaks while still allowing automatic wrapping for long lines.
+
+---
+
+The sections below document the legacy API of `vue-nl2br` for existing users.
 
 ## Requirement
 
