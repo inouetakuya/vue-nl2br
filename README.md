@@ -17,16 +17,16 @@ In modern browsers, `vue-nl2br` can be replaced with a single CSS property: `whi
 ### Before
 
 ```html
-<nl2br tag="p" :text="`myLine1\nmyLine2`" />
+<nl2br tag="p" :text="`myLine1\nmyLine2`" class-name="foo bar" />
 ```
 
 ### After
 
 ```html
-<p style="white-space: pre-wrap;">{{ `myLine1\nmyLine2` }}</p>
+<p class="foo bar" style="white-space: pre-wrap;">{{ `myLine1\nmyLine2` }}</p>
 ```
 
-Or with a CSS class:
+Or with a CSS class (assuming `text` contains `\n` characters):
 
 ```css
 .nl2br {
@@ -41,6 +41,15 @@ Or with a CSS class:
 ### Why `pre-wrap` instead of `pre`?
 
 Historically, `white-space: pre;` was sometimes considered insufficient because it disables line wrapping (see [Issue #7](https://github.com/inouetakuya/vue-nl2br/issues/7)). `white-space: pre-wrap;` solves this by preserving line breaks while still allowing automatic wrapping for long lines.
+
+### Notes on subtle behavior differences
+
+`white-space: pre-wrap;` is not a strictly bit-for-bit replacement for `vue-nl2br`. Two minor differences are worth knowing:
+
+- **Whitespace preservation**: `pre-wrap` also preserves consecutive spaces and tabs in the source text. `vue-nl2br` only converts `\n` into `<br>` and lets the browser collapse other whitespace as usual.
+- **Copy/paste behavior**: text rendered with `<br>` and text rendered with `pre-wrap` may behave slightly differently when users copy the content out of the page.
+
+For the vast majority of use cases — displaying user-generated text with line breaks — these differences are negligible.
 
 ---
 
