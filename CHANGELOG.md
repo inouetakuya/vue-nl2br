@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.2](https://github.com/inouetakuya/vue-nl2br/compare/v1.1.1...v1.1.2) (2026-05-02)
+
+### Notes
+
+- This is the final release. The package is now deprecated and no longer maintained.
+- Use CSS `white-space: pre-wrap;` instead. See README for the migration guide.
+- No functional changes from v1.1.1 — only the deprecation notice in README and dependency updates.
+
 ## [1.1.1](https://github.com/inouetakuya/vue-nl2br/compare/v1.1.0...v1.1.1) (2022-06-11)
 
 ### Bug Fixes
